@@ -8,3 +8,6 @@ def create_student(name):
 def get_students():
     cursor.execute('SELECT * FROM students')
     return cursor.fetchall()
+
+def hakuna_matata():
+    print('zdarova')
