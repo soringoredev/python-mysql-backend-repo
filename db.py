@@ -4,7 +4,7 @@ connection = mysql.connector.connect(
     host='localhost',
     user='root',
     password='root',
-    database='backend_db'
+    database='backend_database'
 )
 
 cursor = connection.cursor()
@@ -24,6 +24,7 @@ CREATE TABLE tasks (
     title VARCHAR(255),
     status VARCHAR(20),
     FOREIGN KEY (student_id) REFERENCES students(id)
+    )
 ''')
 
 connection.commit()
