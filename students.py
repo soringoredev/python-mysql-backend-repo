@@ -11,3 +11,6 @@ def get_students():
 
 def hakuna_matata():
     print('zdarova')
+
+def hakuna_matata2():
+    print('zdarova2')
