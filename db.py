@@ -8,3 +8,22 @@ connection = mysql.connector.connect(
 )
 
 cursor = connection.cursor()
+
+
+cursor.execute('''
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(25) NOT NULL
+)
+''')
+
+cursor.execute('''
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    title VARCHAR(255),
+    status VARCHAR(20),
+    FOREIGN KEY (student_id) REFERENCES students(id)
+''')
+
+connection.commit()
